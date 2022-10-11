@@ -1,0 +1,580 @@
+{
+    "Patient": {
+        "view": {
+            "non-iter": [
+                "patientId",
+                "firstName",
+                "middleName",
+                "lastName",
+                "dob",
+                "email",
+                "sex",
+                "password",
+                "role",
+                "verified",
+                "bloodGroup",
+                "religion",
+                "maritalStatus",
+                "primaryLanguage",
+                "birthPlace",
+                "address",
+                "occupation",
+                "contact1",
+                "contact2",
+                "socioEcoStatus",
+                "immunizationHistory",
+                "allergyStatus",
+                "organDonorStatus",
+                "PMH",
+                "DHx",
+                "Ca",
+                "IDDM",
+                "NIDDM",
+                "COPD",
+                "MI",
+                "AF",
+                "registeredAt"
+            ],
+            "iter": [
+                {
+                    "name": "pincode",
+                    "value": "region"
+                },
+                {
+                    "name": "country",
+                    "value": "countryName"
+                }
+            ],
+            "links": [
+                {
+                    "name": "CareProvider",
+                    "link": "/careprovider?status=view",
+                    "type": "single"
+                },
+                {
+                    "name": "Insurance",
+                    "link": "/insurance?status=view",
+                    "type": "single"
+                },
+                {
+                    "name": "PatientCase",
+                    "value": "patientCase",
+                    "link": "/patientcase?status=view",
+                    "type": "multiple"
+                }
+            ]
+        },
+        "update": {
+            "links": [
+                {
+                    "name": "CareProvider",
+                    "link": "/careprovider?status=update",
+                    "type": "single"
+                },
+                {
+                    "name": "Insurance",
+                    "link": "/insurance?status=update",
+                    "type": "single"
+                }
+            ],
+            "objectKeys": [
+                "password",
+                "repassword",
+                "religion",
+                "maritalStatus",
+                "primaryLanguage",
+                "birthPlace",
+                "address",
+                "occupation",
+                "contact1",
+                "contact2",
+                "socioEcoStatus",
+                "country",
+                "region",
+                "immunizationHistory",
+                "allergyStatus",
+                "organDonorStatus",
+                "PMH",
+                "DHx",
+                "Ca",
+                "IDDM",
+                "NIDDM",
+                "COPD",
+                "MI",
+                "AF"
+            ],
+            "state": {
+                "password": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "password_input",
+                        "type": "password",
+                        "label": "Password"
+                    },
+                    "validation": {
+                        "required": true,
+                        "password": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "repassword": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "repassword_input",
+                        "type": "password",
+                        "label": "Password Check"
+                    },
+                    "validation": {
+                        "required": true,
+                        "password": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "religion": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "religion_input",
+                        "type": "text",
+                        "label": "Religion"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "maritalStatus": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_maritalstatus",
+                        "type": "select",
+                        "label": "Marital Status",
+                        "options": [
+                            {
+                                "key": "Single",
+                                "value": "Single"
+                            },
+                            {
+                                "key": "Married",
+                                "value": "Married"
+                            },
+                            {
+                                "key": "Divorced",
+                                "value": "Divorced"
+                            },
+                            {
+                                "key": "Widowed",
+                                "value": "Widowed"
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "primaryLanguage": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "primaryLanguage_input",
+                        "type": "text",
+                        "label": "Primary Language"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "birthPlace": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "birthPlace_input",
+                        "type": "text",
+                        "label": "Birth Place"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "address": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "address_input",
+                        "type": "text",
+                        "label": "Address"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "contact1": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "contact1_input",
+                        "type": "text",
+                        "label": "Contact 1"
+                    },
+                    "validation": {
+                        "required": true,
+                        "phone": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "contact2": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "contact2_input",
+                        "type": "text",
+                        "label": "Contact 2"
+                    },
+                    "validation": {
+                        "required": true,
+                        "phone": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "occupation": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "occupation_input",
+                        "type": "text",
+                        "label": "Occupation"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "socioEcoStatus": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "socioEcoStatus_input",
+                        "type": "text",
+                        "label": "Social Economic Status"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "country": {
+                    "element": "fetch",
+                    "value": "",
+                    "valueSelect": "",
+                    "config": {
+                        "name": "country_input",
+                        "type": "text",
+                        "label": "Country",
+                        "options": [],
+                        "optionsError": null,
+                        "function": "handleCountry"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "region": {
+                    "element": "fetch",
+                    "value": "",
+                    "valueSelect": "",
+                    "config": {
+                        "name": "region_input",
+                        "type": "text",
+                        "label": "Region",
+                        "options": [],
+                        "optionsError": null,
+                        "function": "handleRegion"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "immunizationHistory": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "immunizationHistory_input",
+                        "type": "text",
+                        "label": "Immunization History"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "PMH": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "PMH_input",
+                        "type": "text",
+                        "label": "PMH"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "DHx": {
+                    "element": "input",
+                    "value": "",
+                    "config": {
+                        "name": "DHx_input",
+                        "type": "text",
+                        "label": "DHx"
+                    },
+                    "validation": {
+                        "required": true
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "allergyStatus": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_allergyStatus",
+                        "type": "select",
+                        "label": "Allergy Status",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "organDonorStatus": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_organDonorStatus",
+                        "type": "select",
+                        "label": "Organ Donor Status",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "Ca": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_Ca",
+                        "type": "select",
+                        "label": "Ca",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "IDDM": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_IDDM",
+                        "type": "select",
+                        "label": "IDDM",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "NIDDM": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_NIDDM",
+                        "type": "select",
+                        "label": "NIDDM",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "COPD": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_COPD",
+                        "type": "select",
+                        "label": "COPD",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "MI": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_MI",
+                        "type": "select",
+                        "label": "MI",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                },
+                "AF": {
+                    "element": "select",
+                    "value": "",
+                    "config": {
+                        "name": "select_AF",
+                        "type": "select",
+                        "label": "AF",
+                        "options": [
+                            {
+                                "key": "Yes",
+                                "value": true
+                            },
+                            {
+                                "key": "No",
+                                "value": false
+                            }
+                        ]
+                    },
+                    "validation": {
+                        "required": false
+                    },
+                    "valid": false,
+                    "validationMessage": "",
+                    "showLabel": true
+                }
+            }
+        }
+    }
+}
